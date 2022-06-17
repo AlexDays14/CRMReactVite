@@ -1,0 +1,12 @@
+{
+  "clientes": [
+    {
+      "nombre": "Alex",
+      "empresa": "React",
+      "email": "react@gmail.com",
+      "telefono": "1234567890",
+      "notas": "quiere vendernos react\n",
+      "id": 1
+    }
+  ]
+}
