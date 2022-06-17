@@ -52,7 +52,7 @@ const Formulario = ({cliente, cargando}) => {
             }
             await respuesta.json()
             resetForm();
-            navigate('/clientes')
+            navigate('/')
         } catch (error) {
             console.log(error)
         }

@@ -25,14 +25,18 @@ const VerCliente = () => {
     }, [])
 
     return (
-        cargando ? <Spinner/> : (
-        Object.keys(cliente).length === 0 ? <p>No Hay Resultados</p> : (
 
         <>
             
                 <>
                     <h1 className='font-black text-4xl text-blue-900'>Ver Cliente</h1>
                     <p className='mt-3 md:text-lg'>Información del Cliente.</p>
+
+                    {cargando ? 
+                    <Spinner/> :
+                    Object.keys(cliente).length === 0 ? 
+                    <p>No Hay Resultados</p> :
+                    (
 
                     <div className="md:w-2/4 mt-10 mx-auto bg-white py-10 px-5 rounded-md shadow-md">
                         <p className="text-2xl text-gray-700"><span className="text-gray-800 uppercase font-bold">Cliente: </span>{cliente.nombre}</p>
@@ -45,10 +49,11 @@ const VerCliente = () => {
 
                         {cliente.notas && <p className="text-xl text-gray-700 mt-4"><span className="text-gray-800 uppercase font-bold">Notas: </span>{cliente.notas}</p>}
                     </div>
+                    )}
                 </>
             
         </>
-        ))
+        
     )
 }
 
