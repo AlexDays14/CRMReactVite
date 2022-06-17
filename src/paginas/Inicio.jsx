@@ -11,7 +11,7 @@ const Inicio = () => {
   useEffect(() =>{
     const obtenerClientesAPI = async () =>{
       try{
-        const url = 'http://localhost:4000/clientes';
+        const url = `${import.meta.env.VITE_API_URL}/clientes`;
         const respuesta = await fetch(url);
         const resultado = await respuesta.json();
         setClientes(resultado);
@@ -34,7 +34,7 @@ const Inicio = () => {
         if (willDelete) {
 
             try {
-                const url = `http://localhost:4000/clientes/${id}`;
+                const url = `${import.meta.env.VITE_API_URL}/clientes/${id}`;
                 const respuesta = await fetch(url, {
                     method: 'DELETE'
                 });
